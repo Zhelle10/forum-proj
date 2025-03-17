@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getComments, updateComment, deleteComment } from "../api/api"; // Import fetch function
 import CommentForm from "./CommentForm";
+import Button from '@mui/material/Button';
 
 
 const CommentList = ({ threadId }) => {
@@ -71,7 +72,7 @@ const CommentList = ({ threadId }) => {
                         onChange={handleEditChange}
                         placeholder="Edit your comment"
                     />
-                    <button onClick={() => handleUpdate(comment.id)}>Update</button>
+                    <button className="updateButton" onClick={() => handleUpdate(comment.id)}>Update</button>
                     <button onClick={() => setEditingComment(null)}>Cancel</button>
                 </div>
             );
@@ -79,7 +80,7 @@ const CommentList = ({ threadId }) => {
             return (
                 <div>
                     <span>{comment.content} - <strong>{comment.username}</strong></span>
-                    <button onClick={() => { setEditingComment(comment.id); setEditText(comment.content); }}>Edit</button>
+                    <button  onClick={() => { setEditingComment(comment.id); setEditText(comment.content); }}>Edit</button>
                     <button onClick={() => handleDelete(comment.id)}>Delete</button>
                 </div>
             );

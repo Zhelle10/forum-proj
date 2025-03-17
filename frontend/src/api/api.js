@@ -83,6 +83,7 @@ export const deleteComment = async (commentId) => {
 
 // Update a comment
 export const updateComment = async (commentId, updatedText) => {
+  console.log(commentId, updatedText);
   try {
     const response = await fetch(`${API_URL}/comments/${commentId}`, {
       method: "PUT",
@@ -91,9 +92,11 @@ export const updateComment = async (commentId, updatedText) => {
       },
       body: JSON.stringify({ content: updatedText }), // Ensure correct JSON structure
     });
+
     if (!response.ok) {
       throw new Error("Failed to update comment");
     }
+
     return await response.json();
   } catch (error) {
     throw new Error(error.message);

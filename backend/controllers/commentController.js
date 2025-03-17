@@ -56,7 +56,9 @@ export function createComment(req, res) {
 
 export const updateComment = (req, res) => {
   const { id } = req.params;
-  const { text } = req.body; // New comment text
+
+  console.log("BODY:", req.body);
+  const { content } = req.body; // New comment text 
 
   try {
     // Check if the comment exists
@@ -66,8 +68,8 @@ export const updateComment = (req, res) => {
     }
 
     // Update the comment
-    const stmt = db.prepare("UPDATE comments SET text = ? WHERE id = ?");
-    const result = stmt.run(text, id);
+    const stmt = db.prepare("UPDATE comments SET content = ? WHERE id = ?");
+    const result = stmt.run(content, id);
 
     if (result.changes === 0) {
       return res.status(400).json({ error: "Comment update failed" });
@@ -76,7 +78,7 @@ export const updateComment = (req, res) => {
     res.json({
       message: "Comment updated successfully",
       id: parseInt(id),
-      text,
+      content,
     });
   } catch (err) {
     res
