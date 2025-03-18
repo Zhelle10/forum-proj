@@ -1,4 +1,5 @@
-import { db } from "../database.js";
+
+  /*import { db } from "../database.js";
 
 // Function to reset the database (useful for development)
 export const resetDatabase = () => {
@@ -53,4 +54,5 @@ export const addTestData = () => {
 
 // Uncomment to run:
 // resetDatabase();
-// addTestData();
+// addTestData(); */
+
