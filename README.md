@@ -16,7 +16,6 @@ Back end
 - Then "nodemon server.js" to run the server http://localhost:5000 .
       
 COMPONENTS
-
 ThreadList:
 - Added edit/delete buttons
 - Added like counter display
@@ -35,6 +34,8 @@ CommentForm:
 
 CommentList:
 - Added like/delete button
+- Added "Create New Thread" button to 
+  redirect the user back to the home page
 
 ThreadForm:
 - Added validation
