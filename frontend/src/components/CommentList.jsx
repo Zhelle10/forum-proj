@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getComments, updateComment, deleteComment } from "../api/api"; // Import fetch function
-import CommentForm from "./CommentForm";
+//import CommentForm from "./CommentForm";
+import { Link as RouterLink } from "react-router-dom";  // Import Link
 import { Button, TextField, List, ListItem, ListItemText, Typography, Box, Card, CardContent } from "@mui/material";
 
 
@@ -123,6 +124,18 @@ const CommentList = ({ threadId }) => {
 
     return (
         <Box sx={{ margin: "0 auto" }}>
+
+            {/* Create New Thread Button */}
+            <Box sx={{ textAlign: "center", mt: 4 }}>
+                <Button
+                    component={RouterLink}
+                    to="/"
+                    variant="contained"
+                    color="primary"
+                >
+                  + Create New Thread
+                </Button>
+            </Box>
             <Typography variant="h4" gutterBottom>
                 Comments
             </Typography>

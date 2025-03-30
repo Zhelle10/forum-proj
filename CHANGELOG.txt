@@ -30,7 +30,7 @@ HOW TO USE:
 3. Delete threads with confirmation
 4. Like threads with the thumb up button
 5. Add comments to any thread
-6. View comment count and likes on thread cards
+6. View comment count and likes on thread 
 7. Edit comments using edit button
 8. Delete comments using delete button
 

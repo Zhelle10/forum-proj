@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { getThreads, deleteThread } from "../api/api";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import {
-    Card, CardContent, Typography, Box, Link,
-    CircularProgress, Alert, IconButton
+    Card, CardContent, Typography, Box, Link, 
+    CircularProgress, Alert, IconButton, Button
 } from "@mui/material";
 import {
     Comment as CommentIcon,
