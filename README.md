@@ -14,8 +14,10 @@ Back end
 - Type "npm install", then..
 - Type "npm install express cors better-sqlite3".
 - Then "nodemon server.js" to run the server http://localhost:5000 .
-      
+
+    
 COMPONENTS
+
 ThreadList:
 - Added edit/delete buttons
 - Added like counter display
@@ -80,11 +82,11 @@ FORUM PROJ
   - main.jsx
   - router.jsx
   - theme.js
-CHANGELOG.txt
-forum.db
-package-lock-json
-packahe.json
-README.md 
+ CHANGELOG.txt
+ forum.db
+ package-lock-json
+ packahe.json
+ README.md 
 
 
 
